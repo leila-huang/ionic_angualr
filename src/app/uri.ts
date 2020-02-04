@@ -1,0 +1,5 @@
+export const URI = {
+    LOGIN: '/login/login?loginId=IQq%252BJDDam%252BQPqHTE9bWtHbBScHh24%252BgSlv6BZTMAUdk=&password=L9Dr4fwd4xLgU6JLyBkHag==&version=JPb1evsG3Rty4uOLE/xi8w==&imsi=xz6qjwdw1MRkC5QDJ%252Br7%252BA==&token=cYpWndRpfb4IXWgMYCRSwry7xs9o17IwraKge1vjY6k%252BtFj0sZUtBgRuyyYrgtCLgVk4ezJkqE2a7ghH1TAAYpa1S5UzOaLHrbevfE12dTQge3SyTK1EyNWVvVlrrBawBHx/zHoHNEovGUe4a2lYQoMullwaK%252Ba58NjWoXCUmMPAgc5ePYJye2CWlnidnwku&appVersion=%252BBN0pYRajbr93OIZ9IlBdQ==&timestampWithRandomValue=1579332868891with0.09585943307219114',
+    HOME: '/login/login?loginId=IQq%252BJDDam%252BQPqHTE9bWtHbBScHh24%252BgSlv6BZTMAUdk=&password=L9Dr4fwd4xLgU6JLyBkHag==&version=JPb1evsG3Rty4uOLE/xi8w==&imsi=xz6qjwdw1MRkC5QDJ%252Br7%252BA==&token=cYpWndRpfb4IXWgMYCRSwry7xs9o17IwraKge1vjY6k%252BtFj0sZUtBgRuyyYrgtCLgVk4ezJkqE2a7ghH1TAAYpa1S5UzOaLHrbevfE12dTQge3SyTK1EyNWVvVlrrBawBHx/zHoHNEovGUe4a2lYQoMullwaK%252Ba58NjWoXCUmMPAgc5ePYJye2CWlnidnwku&appVersion=%252BBN0pYRajbr93OIZ9IlBdQ==&timestampWithRandomValue=1579332868891with0.09585943307219114',
+
+};

@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Tab One
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <!-- banner start -->
+    <ion-slides pager="true" [options]="slideOpts" (ionSlideTouchEnd)="slideDidChange()" #slides>
+        <ion-slide *ngFor="let item of home.srcList">
+            <ion-img src="{{item}}" style="width: 100%"></ion-img>
+        </ion-slide>
+    </ion-slides>
+    <!-- banner end -->
+
+    <ion-row class="row ion-justify-content-center">
+        <ion-col  class="col ion-justify-content-center" size="4" *ngFor="let item of home.productList">
+            <div class="item">
+            <p class="ion-align-self-center">{{item.yield}}</p>
+            <p class="ion-align-self-center">{{item.productName}}</p>
+            </div>
+        </ion-col>
+
+    </ion-row>
+
+
+</ion-content>

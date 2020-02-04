@@ -1,0 +1,7 @@
+{
+  "name": "H5Demo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
