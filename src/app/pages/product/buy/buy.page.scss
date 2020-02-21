@@ -1,0 +1,42 @@
+.buy-list {
+  width: 90%;
+  margin: auto;
+
+  ion-item {
+    line-height: 8vh;
+  }
+  .product{
+    margin: 1vh 3vh 1vh;
+  }
+  .product-name{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 4vh;
+  }
+  .product-yield{
+    font-size: 20px;
+    color: #DF3A3A;
+    line-height: 6vh;
+  }
+  .content-center {
+    ion-label{
+      width: 40%;
+      text-align: center;
+    }
+    .vertical-line {
+      width: 1px;
+      height: 60%;
+      background-color: #bbb;
+    }
+  }
+
+}
+.btn-bottom{
+  position: fixed;
+  bottom: 3vh;
+  width: 90%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  color: #fff;
+}

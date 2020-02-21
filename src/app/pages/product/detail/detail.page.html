@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start"></ion-back-button>
+        <ion-title>产品详情</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list lines="full" class="detail-list">
+        <ion-item>
+            <ion-icon name="archive"></ion-icon>
+            <ion-label class="product">产品名称</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>产品详情</ion-label>
+            <ion-label class="purchase-number">xxx起购</ion-label>
+        </ion-item>
+        <ion-item class="content-center">
+            <ion-label>收益率</ion-label>
+            <div class="vertical-line"></div>
+            <ion-label>期限</ion-label>
+        </ion-item>
+    </ion-list>
+    <p class="rule" >交易规则</p>
+    <ion-button class="btn-bottom" expand="block" (click)="toBuy()">买入</ion-button>
+
+</ion-content>

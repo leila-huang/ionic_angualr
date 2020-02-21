@@ -1,0 +1,44 @@
+.detail-list {
+  width: 90%;
+  margin: auto;
+
+  ion-item {
+    line-height: 11vh;
+  }
+  .product{
+    margin-left: 3vh;
+  }
+  .purchase-number{
+    text-align: right;
+    margin-right: 2vh;
+  }
+  .content-center {
+
+    ion-label{
+      width: 40%;
+      text-align: center;
+    }
+    .vertical-line {
+      width: 1px;
+      height: 60%;
+      background-color: #bbb;
+
+    }
+  }
+
+}
+.rule{
+  width: 80%;
+  padding-top: 3vh;
+  color: #3880ff;
+  margin: auto;
+}
+.btn-bottom{
+  position: fixed;
+  bottom: 3vh;
+  width: 90%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
