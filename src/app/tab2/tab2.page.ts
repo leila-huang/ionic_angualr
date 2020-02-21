@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {EventCenterService} from '../services/event-center.service';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private ev: EventCenterService) {
+  }
 
+  click() {
+    this.ev.emit('Tab2 Message.....');
+  }
 }

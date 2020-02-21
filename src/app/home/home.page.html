@@ -16,8 +16,8 @@
     <!-- banner end -->
 
     <ion-row class="row ion-justify-content-center">
-        <ion-col  class="col ion-justify-content-center" size="4" *ngFor="let item of home.productList">
-            <div class="item">
+        <ion-col  class="col ion-justify-content-center" size="4" *ngFor="let item of home.productList" routerLink="/detail/{{item.productId}}">
+            <div class="item"  >
             <p class="ion-align-self-center">{{item.yield}}</p>
             <p class="ion-align-self-center">{{item.productName}}</p>
             </div>

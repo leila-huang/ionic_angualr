@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {Home, Product} from "../model/home";
-import {HomeService} from "../services/home.service";
+import {Home, Product} from '../model/home';
+import {HomeService} from '../services/home.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -15,14 +16,14 @@ export class HomePage implements OnInit {
     @ViewChild('slides') slides;
     // 当前图片
     currentPic = 0;
-    //假数据
-    srcLists:Array<string> = ["/assets/26.jpg", "/assets/27.jpg", "/assets/28.jpg"];
+    // 假数据
+    srcLists: Array<string> = ['/assets/26.jpg', '/assets/27.jpg', '/assets/28.jpg'];
     product: Array<Product>;
     // 页面数据
-    home: Home={srcList:[],productList:[]};
+    home: Home = {srcList: [], productList: []};
 
 
-    constructor(private homeService:HomeService) {
+    constructor(private homeService: HomeService, private router: Router) {
 
         setInterval(() => {
             let id = (this.currentPic + 1) % 3;
@@ -34,15 +35,14 @@ export class HomePage implements OnInit {
         console.log('请求数据');
         await this.homeService.home();
         console.log('数据返回');
-        this.home.productList = [{yield:'1', productId: 'string', productName: '213'},{yield:'1', productId: 'string', productName: '213'},{yield:'1', productId: 'string', productName: '213'},{yield:'1', productId: 'string', productName: '213'}]
+        this.home.productList = [{yield: '1', productId: 'string', productName: '213'}, {
+            yield: '1',
+            productId: 'string',
+            productName: '213'
+        }, {yield: '1', productId: 'string', productName: '213'}, {yield: '1', productId: 'string', productName: '213'}];
         this.home.srcList = this.srcLists;
     }
-    //  click(){
-    //     console.log('请求数据');
-    //     await this.homeService.home();
-    //     console.log('数据返回');
-    //     this.home.productList = [{yield:'1', productId: 'string', productName: '213'},{yield:'1', productId: 'string', productName: '213'},{yield:'1', productId: 'string', productName: '213'},{yield:'1', productId: 'string', productName: '213'}]
-    // }
+
     slideOpts = {
         speed: 400,
         loop: true,
@@ -71,7 +71,9 @@ export class HomePage implements OnInit {
                     const $slideEl = swiper.slides.eq(i);
                     const offset$$1 = $slideEl[0].swiperSlideOffset;
                     let tx = -offset$$1;
-                    if (!swiper.params.virtualTranslate) tx -= swiper.translate;
+                    if (!swiper.params.virtualTranslate) {
+                        tx -= swiper.translate;
+                    }
                     let ty = 0;
                     if (!swiper.isHorizontal()) {
                         ty = tx;
@@ -94,8 +96,12 @@ export class HomePage implements OnInit {
                 if (swiper.params.virtualTranslate && duration !== 0) {
                     let eventTriggered = false;
                     slides.transitionEnd(() => {
-                        if (eventTriggered) return;
-                        if (!swiper || swiper.destroyed) return;
+                        if (eventTriggered) {
+                            return;
+                        }
+                        if (!swiper || swiper.destroyed) {
+                            return;
+                        }
                         eventTriggered = true;
                         swiper.animating = false;
                         const triggerEvents = ['webkitTransitionEnd', 'transitionend'];
@@ -106,7 +112,7 @@ export class HomePage implements OnInit {
                 }
             },
         }
-    }
+    };
 
     // 避免鼠标点击后自动滑动失效
     slideDidChange() {
@@ -114,4 +120,9 @@ export class HomePage implements OnInit {
     }
 
 
+    // toDetail(id: string) {
+    //     console.log('--------' + id);
+    //     this.router.navigate(['/detail'], {queryParams: {id}});
+    //
+    // }
 }

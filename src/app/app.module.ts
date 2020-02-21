@@ -9,14 +9,14 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {Services} from "./services/services";
-import {InterceptorService} from "./services/interceptor.service";
+import {Services} from './services/services';
+import {InterceptorService} from './services/interceptor.service';
 
 
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
-    imports: [BrowserModule, IonicModule.forRoot({mode:'ios'}), AppRoutingModule,HttpClientModule],
+    imports: [BrowserModule, IonicModule.forRoot({mode: 'ios'}), AppRoutingModule, HttpClientModule],
     providers: [
         StatusBar,
         SplashScreen,
